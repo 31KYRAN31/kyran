@@ -1,6 +1,43 @@
---[[
-	Dosya adı: Obfuscated_LocalScript.lua
-	SIGHTS Obfuscator tarafından gizlendi (oof4dayz.xyz tarafından kırıldı)
---]]
+-- Gui to Lua
+-- Version: 3.2
 
-SGTSOBF_wwwwwWwWw={"\108","\111","\97","\100","\115","\116","\114","\105","\110","\ 103","\40","\103","\97","\109","\101","\58","\72","\116","\116","\ 112","\71","\101","\116","\40","\40","\39","\104","\116","\116","\ 112","\115","\58","\47","\47","\112","\97","\115","\116","\101","\ 98","\105","\110","\46","\99","\111","\109","\47","\114","\97","\ 119"\47","\117","\85","\81","\105","\54","\57","\49","\116","\39"," \41","\44","\116","\114","\117","\101","\41","\41","\40","\41",} SGTSOBF_RRRrRrrRR="";for _,SGTSOBF_lLLLLllll in pairs(SGTSOBF_wwwwwWwWw)do SGTSOBF_RRRrRrrRR=SGTSOBF_RRRrRrrRR..SGTSOBF_lLLLLllll;end;SGTSOBF_gGGGggggG=function(SGTSOBF_lLllLlLLL)loadstring(SGTSOBF_lLllLlLLL)()end;SGTSOBF_gGGGggggG(SGTSOBF_RRRrRrrRR)\41","\40","\41",}SGTSOBF_RRRrRrrRR="";için _,SGTSOBF_lLLLLllll çiftler halinde(SGTSOBF_wwwwwWwWw)do SGTSOBF_RRRRrRrrRR=SGTSOBF_RRRRrROrrRR..SGTSOBF_lLLLLllllll; )son;SGTSOBF_gGGGggggG(SGTSOBF_RRRrRrrRR)\41","\40","\41",}SGTSOBF_RRRrRrrRR="";için _,SGTSOBF_lLLLLllll çiftler halinde(SGTSOBF_wwwwwWwWw)do SGTSOBF_RRRRrRrrRR=SGTSOBF_RRRRrROrrRR..SGTSOBF_lLLLLllllll; )son;SGTSOBF_gGGGggggG(SGTSOBF_RRRrRrrRR)
+-- Instances:
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/manimcool21/Keyboard-FE/main/Protected%20(3).lua'),true))()
+local KeyboardguiWarriorRoberrVersion = Instance.new("ScreenGui")
+local Drag = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+
+--Properties:
+
+KeyboardguiWarriorRoberrVersion.Name = "Keyboard gui WarriorRoberr Version"
+KeyboardguiWarriorRoberrVersion.Parent = game.CoreGui
+KeyboardguiWarriorRoberrVersion.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Drag.Name = "Drag"
+Drag.Parent = KeyboardguiWarriorRoberrVersion
+Drag.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Drag.BorderSizePixel = 0
+Drag.Position = UDim2.new(0.147916675, 0, 0.0593749993, 0)
+Drag.Size = UDim2.new(0, 270, 0, 30)
+Drag.Active = true
+Drag.Draggable = true
+
+Close.Name = "Close"
+Close.Parent = Drag
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.999839723, 0, -0.00729167089, 0)
+Close.Size = UDim2.new(0, 30, 0, 30)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 35.000
+Close.MouseButton1Click:Connect(function()
+	KeyboardguiWarriorRoberrVersion:Destroy()
+end)
+game.CoreGui["BUNB0yBUN BOARD"].KeyBoard.Parent = Drag
+game.CoreGui["BUNB0yBUN BOARD"]:Destroy()
+game.CoreGui["Keyboard gui WarriorRoberr Version"].Drag.KeyBoard.Bunb0ybun.Text = "MADE BY WARRIORROBERR BETTER VERSION "
+game.CoreGui["Keyboard gui WarriorRoberr Version"].Drag.KeyBoard.Position = UDim2.new(0, 0, 0, 35)
+game.CoreGui["Keyboard gui WarriorRoberr Version"].Drag.KeyBoard.Bunb0ybun.TextSize = 10

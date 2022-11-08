@@ -1,0 +1,1644 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Keyboardgui = Instance.new("ScreenGui")
+local drag = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local Removegui = Instance.new("TextButton")
+local Miniize = Instance.new("TextButton")
+local n = Instance.new("TextLabel")
+local Frame = Instance.new("Frame")
+local cre = Instance.new("TextLabel")
+local Link = Instance.new("TextLabel")
+local Actiov = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
+local drag1 = Instance.new("Frame")
+local Close1 = Instance.new("TextButton")
+local Miniize1 = Instance.new("TextButton")
+local Frame1 = Instance.new("Frame")
+local ESC = Instance.new("TextButton")
+local F1 = Instance.new("TextButton")
+local F2 = Instance.new("TextButton")
+local F3 = Instance.new("TextButton")
+local F4 = Instance.new("TextButton")
+local F5 = Instance.new("TextButton")
+local F6 = Instance.new("TextButton")
+local F7 = Instance.new("TextButton")
+local F8 = Instance.new("TextButton")
+local F9 = Instance.new("TextButton")
+local F10 = Instance.new("TextButton")
+local F11 = Instance.new("TextButton")
+local F12 = Instance.new("TextButton")
+local Dot3 = Instance.new("TextButton")
+local _1 = Instance.new("TextButton")
+local _2 = Instance.new("TextButton")
+local _3 = Instance.new("TextButton")
+local _4 = Instance.new("TextButton")
+local _5 = Instance.new("TextButton")
+local _6 = Instance.new("TextButton")
+local _7 = Instance.new("TextButton")
+local _8 = Instance.new("TextButton")
+local _9 = Instance.new("TextButton")
+local _0 = Instance.new("TextButton")
+local Dot10 = Instance.new("TextButton")
+local BackSpace = Instance.new("TextButton")
+local Tab = Instance.new("TextButton")
+local Q = Instance.new("TextButton")
+local W = Instance.new("TextButton")
+local E = Instance.new("TextButton")
+local R = Instance.new("TextButton")
+local T = Instance.new("TextButton")
+local Y = Instance.new("TextButton")
+local U = Instance.new("TextButton")
+local I = Instance.new("TextButton")
+local O = Instance.new("TextButton")
+local P = Instance.new("TextButton")
+local Dot9 = Instance.new("TextButton")
+local Dot8 = Instance.new("TextButton")
+local Dot7 = Instance.new("TextButton")
+local Capslk = Instance.new("TextButton")
+local A = Instance.new("TextButton")
+local S = Instance.new("TextButton")
+local D = Instance.new("TextButton")
+local F = Instance.new("TextButton")
+local G = Instance.new("TextButton")
+local H = Instance.new("TextButton")
+local J = Instance.new("TextButton")
+local K = Instance.new("TextButton")
+local L = Instance.new("TextButton")
+local Dot6 = Instance.new("TextButton")
+local Dot4 = Instance.new("TextButton")
+local Enter = Instance.new("TextButton")
+local Shift = Instance.new("TextButton")
+local Z = Instance.new("TextButton")
+local X = Instance.new("TextButton")
+local C = Instance.new("TextButton")
+local V = Instance.new("TextButton")
+local B = Instance.new("TextButton")
+local N = Instance.new("TextButton")
+local M = Instance.new("TextButton")
+local Dot2 = Instance.new("TextButton")
+local Dot = Instance.new("TextButton")
+local Dot5 = Instance.new("TextButton")
+local Shf = Instance.new("TextButton")
+local Ctrl = Instance.new("TextButton")
+local Space = Instance.new("TextButton")
+local Alt = Instance.new("TextButton")
+local Cth = Instance.new("TextButton")
+local Hidesho = Instance.new("TextButton")
+local Sizechange = Instance.new("TextBox")
+local Setsize = Instance.new("TextButton")
+local Sizechange1 = Instance.new("TextBox")
+
+--Properties:
+
+Keyboardgui.Name = "Keyboard gui"
+Keyboardgui.Parent = game.CoreGui
+Keyboardgui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+drag.Name = "drag"
+drag.Parent = Keyboardgui
+drag.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+drag.BorderSizePixel = 0
+drag.Position = UDim2.new(0.121959455, 0, 0.106523573, 0)
+drag.Size = UDim2.new(0.60041827, 0, 0.0941445753, 0)
+drag.Visible = false
+drag.Active = true
+drag.Draggable = true
+
+Close.Name = "Close"
+Close.Parent = drag
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.894589007, 0, -0.0297756195, 0)
+Close.Size = UDim2.new(0.104525521, 0, 1.00213039, 0)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Click:Connect(function()
+	Open.Visible = true
+	drag.Visible = false
+end)
+
+Removegui.Name = "Remove gui"
+Removegui.Parent = Frame
+Removegui.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Removegui.BorderSizePixel = 0
+Removegui.Position = UDim2.new(0.00214350782, 0, 0.591281116, 0)
+Removegui.Size = UDim2.new(0.999114752, 0, 0.223877117, 0)
+Removegui.Font = Enum.Font.SourceSans
+Removegui.Text = "Remove gui"
+Removegui.TextColor3 = Color3.fromRGB(255, 255, 255)
+Removegui.TextScaled = true
+Removegui.TextSize = 14.000
+Removegui.TextWrapped = true
+Removegui.MouseButton1Click:Connect(function()
+	Keyboardgui:Destroy()
+end)
+
+Miniize.Name = "Miniize"
+Miniize.Parent = drag
+Miniize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Miniize.BorderSizePixel = 0
+Miniize.Position = UDim2.new(0.787025094, 0, -0.0297756195, 0)
+Miniize.Size = UDim2.new(0.104525521, 0, 1.00213039, 0)
+Miniize.Font = Enum.Font.SourceSans
+Miniize.Text = "-"
+Miniize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Miniize.TextSize = 50.000
+Miniize.TextWrapped = true
+function Mini()
+	if Miniize.Text == "-" then
+		Miniize.Text = "+"
+		Frame.Visible = false
+	elseif Miniize.Text == "+" then
+		Miniize.Text = "-"
+		Frame.Visible = true
+	end
+end
+Miniize.MouseButton1Click:Connect(Mini)
+
+n.Name = "n"
+n.Parent = drag
+n.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+n.BorderSizePixel = 0
+n.Size = UDim2.new(0.383685201, 0, 1.00199997, 0)
+n.ZIndex = 0
+n.Font = Enum.Font.SourceSans
+n.Text = "Keyboard gui V1"
+n.TextColor3 = Color3.fromRGB(255, 255, 255)
+n.TextScaled = true
+n.TextSize = 14.000
+n.TextWrapped = true
+
+Frame.Parent = drag
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0, 0, 1.00200033, 0)
+Frame.Size = UDim2.new(1, 0, 5.83020401, 0)
+
+cre.Name = "cre"
+cre.Parent = Frame
+cre.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+cre.BorderSizePixel = 0
+cre.Position = UDim2.new(0, 0, 4.35732872e-08, 0)
+cre.Size = UDim2.new(0.999114573, 0, 0.189174145, 0)
+cre.Font = Enum.Font.SourceSans
+cre.Text = "Script made by Warriorroberr"
+cre.TextColor3 = Color3.fromRGB(255, 255, 255)
+cre.TextScaled = true
+cre.TextSize = 14.000
+cre.TextWrapped = true
+
+Link.Name = "Link"
+Link.Parent = Frame
+Link.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Link.BorderSizePixel = 0
+Link.Position = UDim2.new(0, 0, 0.188671902, 0)
+Link.Size = UDim2.new(0.999114573, 0, 0.189609975, 0)
+Link.Font = Enum.Font.SourceSans
+Link.Text = "YT link: https://youtube.com/c/Warriorroberr"
+Link.TextColor3 = Color3.fromRGB(255, 255, 255)
+Link.TextScaled = true
+Link.TextSize = 14.000
+Link.TextWrapped = true
+
+Actiov.Name = "Actiov"
+Actiov.Parent = Frame
+Actiov.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Actiov.BorderSizePixel = 0
+Actiov.Position = UDim2.new(0, 0, 0.376941711, 0)
+Actiov.Size = UDim2.new(0.999114752, 0, 0.223877117, 0)
+Actiov.Font = Enum.Font.SourceSans
+Actiov.Text = "Keyboard gui v1"
+Actiov.TextColor3 = Color3.fromRGB(255, 255, 255)
+Actiov.TextScaled = true
+Actiov.TextSize = 14.000
+Actiov.TextWrapped = true
+Actiov.MouseButton1Click:Connect(function()
+	drag1.Visible = true
+	Setsize.Visible = true
+	Sizechange.Visible = true
+	Sizechange1.Visible = true
+end)
+
+Open.Name = "Open"
+Open.Parent = Keyboardgui
+Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0, 0, 0.385579884, 0)
+Open.Size = UDim2.new(0.205430046, 0, 0.161123455, 0)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+Open.MouseButton1Click:Connect(function()
+	Open.Visible = false
+	drag.Visible = true
+end)
+
+drag1.Name = "drag1"
+drag1.Parent = Keyboardgui
+drag1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+drag1.BorderSizePixel = 0
+drag1.Position = UDim2.new(0.0506743118, 0, 0.106523566, 0)
+drag1.Size = UDim2.new(0.900432289, 0, 0.0941445753, 0)
+drag1.Visible = false
+drag1.Draggable = true
+drag1.Active = true
+
+Close1.Name = "Close1"
+Close1.Parent = drag1
+Close1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close1.BorderSizePixel = 0
+Close1.Position = UDim2.new(0.894589007, 0, -0.0297756195, 0)
+Close1.Size = UDim2.new(0.104525521, 0, 1.00213039, 0)
+Close1.Font = Enum.Font.SourceSans
+Close1.Text = "X"
+Close1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close1.TextScaled = true
+Close1.TextSize = 14.000
+Close1.TextWrapped = true
+Close1.MouseButton1Click:Connect(function()
+	drag1.Visible = false
+end)
+
+Miniize1.Name = "Miniize1"
+Miniize1.Parent = drag1
+Miniize1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Miniize1.BorderSizePixel = 0
+Miniize1.Position = UDim2.new(0.787025094, 0, -0.0297756195, 0)
+Miniize1.Size = UDim2.new(0.104525521, 0, 1.00213039, 0)
+Miniize1.Font = Enum.Font.SourceSans
+Miniize1.Text = "-"
+Miniize1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Miniize1.TextSize = 50.000
+Miniize1.TextWrapped = true
+function Mini1()
+	if Miniize1.Text == "-" then
+		Miniize1.Text = "+"
+		Frame1.Visible = false
+	elseif Miniize1.Text == "+" then
+		Miniize1.Text = "-"
+		Frame1.Visible = true
+	end
+end
+Miniize1.MouseButton1Click:Connect(Mini1)
+
+Frame1.Name = "Frame1"
+Frame1.Parent = drag1
+Frame1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame1.BorderSizePixel = 0
+Frame1.Position = UDim2.new(0, 0, 1.00200033, 0)
+Frame1.Size = UDim2.new(1, 0, 5.83020401, 0)
+
+ESC.Name = "ESC"
+ESC.Parent = Frame1
+ESC.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+ESC.BorderSizePixel = 0
+ESC.Position = UDim2.new(1.76521571e-08, 0, -0.00571121648, 0)
+ESC.Size = UDim2.new(0.0890000015, 0, 0.18079704, 0)
+ESC.Font = Enum.Font.SourceSans
+ESC.Text = "ESC"
+ESC.TextColor3 = Color3.fromRGB(255, 255, 255)
+ESC.TextScaled = true
+ESC.TextSize = 14.000
+ESC.TextWrapped = true
+ESC.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Escape" ,false ,game)
+end)
+
+F1.Name = "F1"
+F1.Parent = Frame1
+F1.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F1.BorderSizePixel = 0
+F1.Position = UDim2.new(0.0879207402, 0, -0.00571121648, 0)
+F1.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F1.Font = Enum.Font.SourceSans
+F1.Text = "F1"
+F1.TextColor3 = Color3.fromRGB(255, 255, 255)
+F1.TextScaled = true
+F1.TextSize = 14.000
+F1.TextWrapped = true
+F1.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F1" ,false ,game)
+end)
+
+F2.Name = "F2"
+F2.Parent = Frame1
+F2.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F2.BorderSizePixel = 0
+F2.Position = UDim2.new(0.159386486, 0, -0.00571121648, 0)
+F2.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F2.Font = Enum.Font.SourceSans
+F2.Text = "F2"
+F2.TextColor3 = Color3.fromRGB(255, 255, 255)
+F2.TextScaled = true
+F2.TextSize = 14.000
+F2.TextWrapped = true
+F2.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F2" ,false ,game)
+end)
+
+F3.Name = "F3"
+F3.Parent = Frame1
+F3.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F3.BorderSizePixel = 0
+F3.Position = UDim2.new(0.230852231, 0, -0.00571121648, 0)
+F3.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F3.Font = Enum.Font.SourceSans
+F3.Text = "F3"
+F3.TextColor3 = Color3.fromRGB(255, 255, 255)
+F3.TextScaled = true
+F3.TextSize = 14.000
+F3.TextWrapped = true
+F3.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F3" ,false ,game)
+end)
+
+F4.Name = "F4"
+F4.Parent = Frame1
+F4.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F4.BorderSizePixel = 0
+F4.Position = UDim2.new(0.31946975, 0, -0.00571121648, 0)
+F4.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F4.Font = Enum.Font.SourceSans
+F4.Text = "F4"
+F4.TextColor3 = Color3.fromRGB(255, 255, 255)
+F4.TextScaled = true
+F4.TextSize = 14.000
+F4.TextWrapped = true
+F4.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F4" ,false ,game)
+end)
+
+F5.Name = "F5"
+F5.Parent = Frame1
+F5.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F5.BorderSizePixel = 0
+F5.Position = UDim2.new(0.390935481, 0, -0.00571121648, 0)
+F5.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F5.Font = Enum.Font.SourceSans
+F5.Text = "F5"
+F5.TextColor3 = Color3.fromRGB(255, 255, 255)
+F5.TextScaled = true
+F5.TextSize = 14.000
+F5.TextWrapped = true
+F5.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F5" ,false ,game)
+end)
+
+F6.Name = "F6"
+F6.Parent = Frame1
+F6.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F6.BorderSizePixel = 0
+F6.Position = UDim2.new(0.480982304, 0, -0.00571121648, 0)
+F6.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F6.Font = Enum.Font.SourceSans
+F6.Text = "F6"
+F6.TextColor3 = Color3.fromRGB(255, 255, 255)
+F6.TextScaled = true
+F6.TextSize = 14.000
+F6.TextWrapped = true
+F6.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F6" ,false ,game)
+end)
+
+F7.Name = "F7"
+F7.Parent = Frame1
+F7.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F7.BorderSizePixel = 0
+F7.Position = UDim2.new(0.552448034, 0, -0.00571121648, 0)
+F7.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F7.Font = Enum.Font.SourceSans
+F7.Text = "F7"
+F7.TextColor3 = Color3.fromRGB(255, 255, 255)
+F7.TextScaled = true
+F7.TextSize = 14.000
+F7.TextWrapped = true
+F7.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F7" ,false ,game)
+end)
+
+F8.Name = "F8"
+F8.Parent = Frame1
+F8.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F8.BorderSizePixel = 0
+F8.Position = UDim2.new(0.623913765, 0, -0.00571121648, 0)
+F8.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F8.Font = Enum.Font.SourceSans
+F8.Text = "F8"
+F8.TextColor3 = Color3.fromRGB(255, 255, 255)
+F8.TextScaled = true
+F8.TextSize = 14.000
+F8.TextWrapped = true
+F8.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F8" ,false ,game)
+end)
+
+F9.Name = "F9"
+F9.Parent = Frame1
+F9.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F9.BorderSizePixel = 0
+F9.Position = UDim2.new(0.695379496, 0, -0.00571121648, 0)
+F9.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F9.Font = Enum.Font.SourceSans
+F9.Text = "F9"
+F9.TextColor3 = Color3.fromRGB(255, 255, 255)
+F9.TextScaled = true
+F9.TextSize = 14.000
+F9.TextWrapped = true
+F9.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F9" ,false ,game)
+end)
+
+F10.Name = "F10"
+F10.Parent = Frame1
+F10.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F10.BorderSizePixel = 0
+F10.Position = UDim2.new(0.766845226, 0, -0.00571121648, 0)
+F10.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F10.Font = Enum.Font.SourceSans
+F10.Text = "F10"
+F10.TextColor3 = Color3.fromRGB(255, 255, 255)
+F10.TextScaled = true
+F10.TextSize = 14.000
+F10.TextWrapped = true
+F10.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F10" ,false ,game)
+end)
+
+F11.Name = "F11"
+F11.Parent = Frame1
+F11.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F11.BorderSizePixel = 0
+F11.Position = UDim2.new(0.838310957, 0, -0.00571121648, 0)
+F11.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F11.Font = Enum.Font.SourceSans
+F11.Text = "F11"
+F11.TextColor3 = Color3.fromRGB(255, 255, 255)
+F11.TextScaled = true
+F11.TextSize = 14.000
+F11.TextWrapped = true
+F11.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F11" ,false ,game)
+end)
+
+F12.Name = "F12"
+F12.Parent = Frame1
+F12.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F12.BorderSizePixel = 0
+F12.Position = UDim2.new(0.909776688, 0, -0.00571121648, 0)
+F12.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F12.Font = Enum.Font.SourceSans
+F12.Text = "F12"
+F12.TextColor3 = Color3.fromRGB(255, 255, 255)
+F12.TextScaled = true
+F12.TextSize = 14.000
+F12.TextWrapped = true
+F12.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F12" ,false ,game)
+end)
+
+Dot3.Name = "Dot3"
+Dot3.Parent = Frame1
+Dot3.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot3.BorderSizePixel = 0
+Dot3.Position = UDim2.new(1.76521571e-08, 0, 0.17405732, 0)
+Dot3.Size = UDim2.new(0.0890000015, 0, 0.18079704, 0)
+Dot3.Font = Enum.Font.SourceSans
+Dot3.Text = "`"
+Dot3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot3.TextScaled = true
+Dot3.TextSize = 14.000
+Dot3.TextWrapped = true
+
+_1.Name = "1"
+_1.Parent = Frame1
+_1.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_1.BorderSizePixel = 0
+_1.Position = UDim2.new(0.0879207402, 0, 0.17405732, 0)
+_1.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_1.Font = Enum.Font.SourceSans
+_1.Text = "1"
+_1.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1.TextScaled = true
+_1.TextSize = 14.000
+_1.TextWrapped = true
+
+_2.Name = "2"
+_2.Parent = Frame1
+_2.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_2.BorderSizePixel = 0
+_2.Position = UDim2.new(0.159386486, 0, 0.17405732, 0)
+_2.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_2.Font = Enum.Font.SourceSans
+_2.Text = "2"
+_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+_2.TextScaled = true
+_2.TextSize = 14.000
+_2.TextWrapped = true
+
+_3.Name = "3"
+_3.Parent = Frame1
+_3.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_3.BorderSizePixel = 0
+_3.Position = UDim2.new(0.229422927, 0, 0.17405732, 0)
+_3.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_3.Font = Enum.Font.SourceSans
+_3.Text = "3"
+_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+_3.TextScaled = true
+_3.TextSize = 14.000
+_3.TextWrapped = true
+
+_4.Name = "4"
+_4.Parent = Frame1
+_4.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_4.BorderSizePixel = 0
+_4.Position = UDim2.new(0.300888658, 0, 0.17405732, 0)
+_4.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_4.Font = Enum.Font.SourceSans
+_4.Text = "4"
+_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+_4.TextScaled = true
+_4.TextSize = 14.000
+_4.TextWrapped = true
+
+_5.Name = "5"
+_5.Parent = Frame1
+_5.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_5.BorderSizePixel = 0
+_5.Position = UDim2.new(0.372354388, 0, 0.17405732, 0)
+_5.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_5.Font = Enum.Font.SourceSans
+_5.Text = "5"
+_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+_5.TextScaled = true
+_5.TextSize = 14.000
+_5.TextWrapped = true
+
+_6.Name = "6"
+_6.Parent = Frame1
+_6.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_6.BorderSizePixel = 0
+_6.Position = UDim2.new(0.443820119, 0, 0.17405732, 0)
+_6.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_6.Font = Enum.Font.SourceSans
+_6.Text = "6"
+_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+_6.TextScaled = true
+_6.TextSize = 14.000
+_6.TextWrapped = true
+
+_7.Name = "7"
+_7.Parent = Frame1
+_7.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_7.BorderSizePixel = 0
+_7.Position = UDim2.new(0.51528585, 0, 0.17405732, 0)
+_7.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_7.Font = Enum.Font.SourceSans
+_7.Text = "7"
+_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+_7.TextScaled = true
+_7.TextSize = 14.000
+_7.TextWrapped = true
+
+_8.Name = "8"
+_8.Parent = Frame1
+_8.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_8.BorderSizePixel = 0
+_8.Position = UDim2.new(0.58675158, 0, 0.17405732, 0)
+_8.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_8.Font = Enum.Font.SourceSans
+_8.Text = "8"
+_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+_8.TextScaled = true
+_8.TextSize = 14.000
+_8.TextWrapped = true
+
+_9.Name = "9"
+_9.Parent = Frame1
+_9.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_9.BorderSizePixel = 0
+_9.Position = UDim2.new(0.658217311, 0, 0.17405732, 0)
+_9.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_9.Font = Enum.Font.SourceSans
+_9.Text = "9"
+_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+_9.TextScaled = true
+_9.TextSize = 14.000
+_9.TextWrapped = true
+
+_0.Name = "0"
+_0.Parent = Frame1
+_0.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+_0.BorderSizePixel = 0
+_0.Position = UDim2.new(0.729683042, 0, 0.17405732, 0)
+_0.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+_0.Font = Enum.Font.SourceSans
+_0.Text = "0"
+_0.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0.TextScaled = true
+_0.TextSize = 14.000
+_0.TextWrapped = true
+
+Dot10.Name = "Dot10"
+Dot10.Parent = Frame1
+Dot10.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot10.BorderSizePixel = 0
+Dot10.Position = UDim2.new(0.801148772, 0, 0.17405732, 0)
+Dot10.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Dot10.Font = Enum.Font.SourceSans
+Dot10.Text = "="
+Dot10.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot10.TextScaled = true
+Dot10.TextSize = 14.000
+Dot10.TextWrapped = true
+
+BackSpace.Name = "BackSpace"
+BackSpace.Parent = Frame1
+BackSpace.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+BackSpace.BorderSizePixel = 0
+BackSpace.Position = UDim2.new(0.871882141, 0, 0.17405729, 0)
+BackSpace.Size = UDim2.new(0.109894663, 0, 0.18079704, 0)
+BackSpace.Font = Enum.Font.SourceSans
+BackSpace.Text = "BackSpace"
+BackSpace.TextColor3 = Color3.fromRGB(255, 255, 255)
+BackSpace.TextScaled = true
+BackSpace.TextSize = 14.000
+BackSpace.TextWrapped = true
+BackSpace.MouseButton1Click:Connect(function()
+	game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Parent = game.Workspace
+end)
+
+Tab.Name = "Tab"
+Tab.Parent = Frame1
+Tab.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Tab.BorderSizePixel = 0
+Tab.Position = UDim2.new(1.76951289e-08, 0, 0.353825837, 0)
+Tab.Size = UDim2.new(0.0890000015, 0, 0.18079704, 0)
+Tab.Font = Enum.Font.SourceSans
+Tab.Text = "Tab"
+Tab.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab.TextScaled = true
+Tab.TextSize = 14.000
+Tab.TextWrapped = true
+Tab.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Tab" ,false ,game)
+end)
+
+Q.Name = "Q"
+Q.Parent = Frame1
+Q.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Q.BorderSizePixel = 0
+Q.Position = UDim2.new(0.0879207402, 0, 0.353825867, 0)
+Q.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Q.Font = Enum.Font.SourceSans
+Q.Text = "Q"
+Q.TextColor3 = Color3.fromRGB(255, 255, 255)
+Q.TextScaled = true
+Q.TextSize = 14.000
+Q.TextWrapped = true
+Q.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Q" ,false ,game)
+end)
+
+W.Name = "W"
+W.Parent = Frame1
+W.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+W.BorderSizePixel = 0
+W.Position = UDim2.new(0.159386486, 0, 0.353825867, 0)
+W.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+W.Font = Enum.Font.SourceSans
+W.Text = "W"
+W.TextColor3 = Color3.fromRGB(255, 255, 255)
+W.TextScaled = true
+W.TextSize = 14.000
+W.TextWrapped = true
+W.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+end)
+
+W.TouchLongPress:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "W" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "W" ,false ,game)
+end)
+
+E.Name = "E"
+E.Parent = Frame1
+E.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+E.BorderSizePixel = 0
+E.Position = UDim2.new(0.229422912, 0, 0.353825867, 0)
+E.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+E.Font = Enum.Font.SourceSans
+E.Text = "E"
+E.TextColor3 = Color3.fromRGB(255, 255, 255)
+E.TextScaled = true
+E.TextSize = 14.000
+E.TextWrapped = true
+E.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "E" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "E" ,false ,game)
+end)
+
+R.Name = "R"
+R.Parent = Frame1
+R.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+R.BorderSizePixel = 0
+R.Position = UDim2.new(0.299459338, 0, 0.353825867, 0)
+R.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+R.Font = Enum.Font.SourceSans
+R.Text = "R"
+R.TextColor3 = Color3.fromRGB(255, 255, 255)
+R.TextScaled = true
+R.TextSize = 14.000
+R.TextWrapped = true
+R.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "R" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "R" ,false ,game)
+end)
+
+T.Name = "T"
+T.Parent = Frame1
+T.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+T.BorderSizePixel = 0
+T.Position = UDim2.new(0.370925099, 0, 0.353825867, 0)
+T.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+T.Font = Enum.Font.SourceSans
+T.Text = "T"
+T.TextColor3 = Color3.fromRGB(255, 255, 255)
+T.TextScaled = true
+T.TextSize = 14.000
+T.TextWrapped = true
+T.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "T" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "T" ,false ,game)
+end)
+
+Y.Name = "Y"
+Y.Parent = Frame1
+Y.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Y.BorderSizePixel = 0
+Y.Position = UDim2.new(0.44096154, 0, 0.353825867, 0)
+Y.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Y.Font = Enum.Font.SourceSans
+Y.Text = "Y"
+Y.TextColor3 = Color3.fromRGB(255, 255, 255)
+Y.TextScaled = true
+Y.TextSize = 14.000
+Y.TextWrapped = true
+Y.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Y" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Y" ,false ,game)
+end)
+
+U.Name = "U"
+U.Parent = Frame1
+U.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+U.BorderSizePixel = 0
+U.Position = UDim2.new(0.51242727, 0, 0.353825867, 0)
+U.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+U.Font = Enum.Font.SourceSans
+U.Text = "U"
+U.TextColor3 = Color3.fromRGB(255, 255, 255)
+U.TextScaled = true
+U.TextSize = 14.000
+U.TextWrapped = true
+U.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "U" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "U" ,false ,game)
+end)
+
+I.Name = "I"
+I.Parent = Frame1
+I.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+I.BorderSizePixel = 0
+I.Position = UDim2.new(0.583893001, 0, 0.353825867, 0)
+I.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+I.Font = Enum.Font.SourceSans
+I.Text = "I"
+I.TextColor3 = Color3.fromRGB(255, 255, 255)
+I.TextScaled = true
+I.TextSize = 14.000
+I.TextWrapped = true
+I.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "I" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "I" ,false ,game)
+end)
+
+O.Name = "O"
+O.Parent = Frame1
+O.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+O.BorderSizePixel = 0
+O.Position = UDim2.new(0.655358732, 0, 0.353825867, 0)
+O.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+O.Font = Enum.Font.SourceSans
+O.Text = "O"
+O.TextColor3 = Color3.fromRGB(255, 255, 255)
+O.TextScaled = true
+O.TextSize = 14.000
+O.TextWrapped = true
+O.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "O" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "O" ,false ,game)
+end)
+
+P.Name = "P"
+P.Parent = Frame1
+P.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+P.BorderSizePixel = 0
+P.Position = UDim2.new(0.726824462, 0, 0.353825867, 0)
+P.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+P.Font = Enum.Font.SourceSans
+P.Text = "P"
+P.TextColor3 = Color3.fromRGB(255, 255, 255)
+P.TextScaled = true
+P.TextSize = 14.000
+P.TextWrapped = true
+P.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "P" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "P" ,false ,game)
+end)
+
+Dot9.Name = "Dot9"
+Dot9.Parent = Frame1
+Dot9.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot9.BorderSizePixel = 0
+Dot9.Position = UDim2.new(0.798290193, 0, 0.353825867, 0)
+Dot9.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Dot9.Font = Enum.Font.SourceSans
+Dot9.Text = "["
+Dot9.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot9.TextScaled = true
+Dot9.TextSize = 14.000
+Dot9.TextWrapped = true
+
+Dot8.Name = "Dot8"
+Dot8.Parent = Frame1
+Dot8.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot8.BorderSizePixel = 0
+Dot8.Position = UDim2.new(0.869755924, 0, 0.353825867, 0)
+Dot8.Size = UDim2.new(0.0605654754, 0, 0.18079704, 0)
+Dot8.Font = Enum.Font.SourceSans
+Dot8.Text = "]"
+Dot8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot8.TextScaled = true
+Dot8.TextSize = 14.000
+Dot8.TextWrapped = true
+
+Dot7.Name = "Dot7"
+Dot7.Parent = Frame1
+Dot7.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot7.BorderSizePixel = 0
+Dot7.Position = UDim2.new(0.922640622, 0, 0.353825867, 0)
+Dot7.Size = UDim2.new(0.0587783083, 0, 0.18079704, 0)
+Dot7.Font = Enum.Font.SourceSans
+Dot7.Text = "\\"
+Dot7.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot7.TextScaled = true
+Dot7.TextSize = 14.000
+Dot7.TextWrapped = true
+
+Capslk.Name = "Capslk"
+Capslk.Parent = Frame1
+Capslk.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Capslk.BorderSizePixel = 0
+Capslk.Position = UDim2.new(1.76951289e-08, 0, 0.5301373, 0)
+Capslk.Size = UDim2.new(0.0890000015, 0, 0.18079704, 0)
+Capslk.Font = Enum.Font.SourceSans
+Capslk.Text = "Caps LK"
+Capslk.TextColor3 = Color3.fromRGB(255, 255, 255)
+Capslk.TextScaled = true
+Capslk.TextSize = 14.000
+Capslk.TextWrapped = true
+
+A.Name = "A"
+A.Parent = Frame1
+A.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+A.BorderSizePixel = 0
+A.Position = UDim2.new(0.0879207402, 0, 0.5301373, 0)
+A.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+A.Font = Enum.Font.SourceSans
+A.Text = "A"
+A.TextColor3 = Color3.fromRGB(255, 255, 255)
+A.TextScaled = true
+A.TextSize = 14.000
+A.TextWrapped = true
+A.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+end)
+
+A.TouchLongPress:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "A" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "A" ,false ,game)
+end)
+
+S.Name = "S"
+S.Parent = Frame1
+S.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+S.BorderSizePixel = 0
+S.Position = UDim2.new(0.159386486, 0, 0.5301373, 0)
+S.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+S.Font = Enum.Font.SourceSans
+S.Text = "S"
+S.TextColor3 = Color3.fromRGB(255, 255, 255)
+S.TextScaled = true
+S.TextSize = 14.000
+S.TextWrapped = true
+S.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+end)
+
+S.TouchLongPress:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S" ,false ,game)
+end)
+
+D.Name = "D"
+D.Parent = Frame1
+D.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+D.BorderSizePixel = 0
+D.Position = UDim2.new(0.229422912, 0, 0.5301373, 0)
+D.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+D.Font = Enum.Font.SourceSans
+D.Text = "D"
+D.TextColor3 = Color3.fromRGB(255, 255, 255)
+D.TextScaled = true
+D.TextSize = 14.000
+D.TextWrapped = true
+D.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+end)
+
+D.TouchLongPress:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "D" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "D" ,false ,game)
+end)
+
+F.Name = "F"
+F.Parent = Frame1
+F.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+F.BorderSizePixel = 0
+F.Position = UDim2.new(0.300888658, 0, 0.5301373, 0)
+F.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+F.Font = Enum.Font.SourceSans
+F.Text = "F"
+F.TextColor3 = Color3.fromRGB(255, 255, 255)
+F.TextScaled = true
+F.TextSize = 14.000
+F.TextWrapped = true
+F.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "F" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "F" ,false ,game)
+end)
+
+G.Name = "G"
+G.Parent = Frame1
+G.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+G.BorderSizePixel = 0
+G.Position = UDim2.new(0.369495749, 0, 0.5301373, 0)
+G.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+G.Font = Enum.Font.SourceSans
+G.Text = "G"
+G.TextColor3 = Color3.fromRGB(255, 255, 255)
+G.TextScaled = true
+G.TextSize = 14.000
+G.TextWrapped = true
+G.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "G" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "G" ,false ,game)
+end)
+
+H.Name = "H"
+H.Parent = Frame1
+H.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+H.BorderSizePixel = 0
+H.Position = UDim2.new(0.44096151, 0, 0.5301373, 0)
+H.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+H.Font = Enum.Font.SourceSans
+H.Text = "H"
+H.TextColor3 = Color3.fromRGB(255, 255, 255)
+H.TextScaled = true
+H.TextSize = 14.000
+H.TextWrapped = true
+H.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "H" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "H" ,false ,game)
+end)
+
+J.Name = "J"
+J.Parent = Frame1
+J.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+J.BorderSizePixel = 0
+J.Position = UDim2.new(0.510997951, 0, 0.5301373, 0)
+J.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+J.Font = Enum.Font.SourceSans
+J.Text = "J"
+J.TextColor3 = Color3.fromRGB(255, 255, 255)
+J.TextScaled = true
+J.TextSize = 14.000
+J.TextWrapped = true
+J.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "J" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "J" ,false ,game)
+end)
+
+K.Name = "K"
+K.Parent = Frame1
+K.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+K.BorderSizePixel = 0
+K.Position = UDim2.new(0.582463682, 0, 0.5301373, 0)
+K.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+K.Font = Enum.Font.SourceSans
+K.Text = "K"
+K.TextColor3 = Color3.fromRGB(255, 255, 255)
+K.TextScaled = true
+K.TextSize = 14.000
+K.TextWrapped = true
+K.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "K" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "K" ,false ,game)
+end)
+
+L.Name = "L"
+L.Parent = Frame1
+L.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+L.BorderSizePixel = 0
+L.Position = UDim2.new(0.653929412, 0, 0.5301373, 0)
+L.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+L.Font = Enum.Font.SourceSans
+L.Text = "L"
+L.TextColor3 = Color3.fromRGB(255, 255, 255)
+L.TextScaled = true
+L.TextSize = 14.000
+L.TextWrapped = true
+L.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "L" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "L" ,false ,game)
+end)
+
+Dot6.Name = "Dot6"
+Dot6.Parent = Frame1
+Dot6.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot6.BorderSizePixel = 0
+Dot6.Position = UDim2.new(0.725395143, 0, 0.5301373, 0)
+Dot6.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Dot6.Font = Enum.Font.SourceSans
+Dot6.Text = ";"
+Dot6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot6.TextScaled = true
+Dot6.TextSize = 14.000
+Dot6.TextWrapped = true
+
+Dot4.Name = "Dot4"
+Dot4.Parent = Frame1
+Dot4.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot4.BorderSizePixel = 0
+Dot4.Position = UDim2.new(0.796860874, 0, 0.5301373, 0)
+Dot4.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Dot4.Font = Enum.Font.SourceSans
+Dot4.Text = "'"
+Dot4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot4.TextScaled = true
+Dot4.TextSize = 14.000
+Dot4.TextWrapped = true
+
+Enter.Name = "Enter"
+Enter.Parent = Frame1
+Enter.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Enter.BorderSizePixel = 0
+Enter.Position = UDim2.new(0.869023502, 0, 0.530137241, 0)
+Enter.Size = UDim2.new(0.109894663, 0, 0.18079704, 0)
+Enter.Font = Enum.Font.SourceSans
+Enter.Text = "Enter"
+Enter.TextColor3 = Color3.fromRGB(255, 255, 255)
+Enter.TextScaled = true
+Enter.TextSize = 14.000
+Enter.TextWrapped = true
+Enter.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Enter" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Enter" ,false ,game)
+end)
+
+Shift.Name = "Shift"
+Shift.Parent = Frame1
+Shift.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Shift.BorderSizePixel = 0
+Shift.Position = UDim2.new(1.76951289e-08, 0, 0.709905863, 0)
+Shift.Size = UDim2.new(0.0890000015, 0, 0.18079704, 0)
+Shift.Font = Enum.Font.SourceSans
+Shift.Text = "Shift"
+Shift.TextColor3 = Color3.fromRGB(255, 255, 255)
+Shift.TextScaled = true
+Shift.TextSize = 14.000
+Shift.TextWrapped = true
+Shift.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Shift" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Shift" ,false ,game)
+end)
+
+Z.Name = "Z"
+Z.Parent = Frame1
+Z.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Z.BorderSizePixel = 0
+Z.Position = UDim2.new(0.0879207402, 0, 0.709905863, 0)
+Z.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Z.Font = Enum.Font.SourceSans
+Z.Text = "Z"
+Z.TextColor3 = Color3.fromRGB(255, 255, 255)
+Z.TextScaled = true
+Z.TextSize = 14.000
+Z.TextWrapped = true
+Z.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Z" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Z" ,false ,game)
+end)
+
+X.Name = "X"
+X.Parent = Frame1
+X.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.159386486, 0, 0.709905863, 0)
+X.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+X.Font = Enum.Font.SourceSans
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(255, 255, 255)
+X.TextScaled = true
+X.TextSize = 14.000
+X.TextWrapped = true
+X.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "X" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "X" ,false ,game)
+end)
+
+C.Name = "C"
+C.Parent = Frame1
+C.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+C.BorderSizePixel = 0
+C.Position = UDim2.new(0.229422912, 0, 0.709905863, 0)
+C.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+C.Font = Enum.Font.SourceSans
+C.Text = "C"
+C.TextColor3 = Color3.fromRGB(255, 255, 255)
+C.TextScaled = true
+C.TextSize = 14.000
+C.TextWrapped = true
+C.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "C" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "C" ,false ,game)
+end)
+
+V.Name = "V"
+V.Parent = Frame1
+V.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+V.BorderSizePixel = 0
+V.Position = UDim2.new(0.300888658, 0, 0.709905863, 0)
+V.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+V.Font = Enum.Font.SourceSans
+V.Text = "V"
+V.TextColor3 = Color3.fromRGB(255, 255, 255)
+V.TextScaled = true
+V.TextSize = 14.000
+V.TextWrapped = true
+V.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "V" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "V" ,false ,game)
+end)
+
+B.Name = "B"
+B.Parent = Frame1
+B.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+B.BorderSizePixel = 0
+B.Position = UDim2.new(0.369495749, 0, 0.709905863, 0)
+B.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+B.Font = Enum.Font.SourceSans
+B.Text = "B"
+B.TextColor3 = Color3.fromRGB(255, 255, 255)
+B.TextScaled = true
+B.TextSize = 14.000
+B.TextWrapped = true
+B.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "B" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "B" ,false ,game)
+end)
+
+N.Name = "N"
+N.Parent = Frame1
+N.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+N.BorderSizePixel = 0
+N.Position = UDim2.new(0.44096151, 0, 0.709905863, 0)
+N.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+N.Font = Enum.Font.SourceSans
+N.Text = "N"
+N.TextColor3 = Color3.fromRGB(255, 255, 255)
+N.TextScaled = true
+N.TextSize = 14.000
+N.TextWrapped = true
+N.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "N" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "N" ,false ,game)
+end)
+
+M.Name = "M"
+M.Parent = Frame1
+M.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+M.BorderSizePixel = 0
+M.Position = UDim2.new(0.510997951, 0, 0.709905863, 0)
+M.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+M.Font = Enum.Font.SourceSans
+M.Text = "M"
+M.TextColor3 = Color3.fromRGB(255, 255, 255)
+M.TextScaled = true
+M.TextSize = 14.000
+M.TextWrapped = true
+M.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "M" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "M" ,false ,game)
+end)
+
+Dot2.Name = "Dot2"
+Dot2.Parent = Frame1
+Dot2.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot2.BorderSizePixel = 0
+Dot2.Position = UDim2.new(0.582463741, 0, 0.709905863, 0)
+Dot2.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Dot2.Font = Enum.Font.SourceSans
+Dot2.Text = ","
+Dot2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot2.TextScaled = true
+Dot2.TextSize = 14.000
+Dot2.TextWrapped = true
+
+Dot.Name = "Dot"
+Dot.Parent = Frame1
+Dot.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot.BorderSizePixel = 0
+Dot.Position = UDim2.new(0.651070833, 0, 0.709905863, 0)
+Dot.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Dot.Font = Enum.Font.SourceSans
+Dot.Text = "."
+Dot.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot.TextScaled = true
+Dot.TextSize = 14.000
+Dot.TextWrapped = true
+
+Dot5.Name = "Dot5"
+Dot5.Parent = Frame1
+Dot5.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Dot5.BorderSizePixel = 0
+Dot5.Position = UDim2.new(0.722536564, 0, 0.709905863, 0)
+Dot5.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Dot5.Font = Enum.Font.SourceSans
+Dot5.Text = "/"
+Dot5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Dot5.TextScaled = true
+Dot5.TextSize = 14.000
+Dot5.TextWrapped = true
+
+Shf.Name = "Shf"
+Shf.Parent = Frame1
+Shf.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Shf.BorderSizePixel = 0
+Shf.Position = UDim2.new(0.792572975, 0, 0.709905863, 0)
+Shf.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Shf.Font = Enum.Font.SourceSans
+Shf.Text = "Shift"
+Shf.TextColor3 = Color3.fromRGB(255, 255, 255)
+Shf.TextScaled = true
+Shf.TextSize = 14.000
+Shf.TextWrapped = true
+Shf.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Shift" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Shift" ,false ,game)
+end)
+
+Ctrl.Name = "Ctrl"
+Ctrl.Parent = Frame1
+Ctrl.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Ctrl.BorderSizePixel = 0
+Ctrl.Position = UDim2.new(0.100000001, 0, 0.889674485, 0)
+Ctrl.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Ctrl.Font = Enum.Font.SourceSans
+Ctrl.Text = "Ctrl"
+Ctrl.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ctrl.TextScaled = true
+Ctrl.TextSize = 14.000
+Ctrl.TextWrapped = true
+Ctrl.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Control" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Control" ,false ,game)
+end)
+
+Space.Name = "Space"
+Space.Parent = Frame1
+Space.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Space.BorderSizePixel = 0
+Space.Position = UDim2.new(0.17225033, 0, 0.889674485, 0)
+Space.Size = UDim2.new(0.536527216, 0, 0.18079704, 0)
+Space.Font = Enum.Font.SourceSans
+Space.Text = ""
+Space.TextColor3 = Color3.fromRGB(255, 255, 255)
+Space.TextScaled = true
+Space.TextSize = 14.000
+Space.TextWrapped = true
+Space.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+end)
+
+Space.TouchLongPress:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Space" ,false ,game)
+	wait(.1)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Space" ,false ,game)
+end)
+
+Alt.Name = "Alt"
+Alt.Parent = Frame1
+Alt.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Alt.BorderSizePixel = 0
+Alt.Position = UDim2.new(0.70824337, 0, 0.889674485, 0)
+Alt.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Alt.Font = Enum.Font.SourceSans
+Alt.Text = "Alt"
+Alt.TextColor3 = Color3.fromRGB(255, 255, 255)
+Alt.TextScaled = true
+Alt.TextSize = 14.000
+Alt.TextWrapped = true
+Alt.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Alt" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Alt" ,false ,game)
+end)
+
+Cth.Name = "Cth"
+Cth.Parent = Frame1
+Cth.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Cth.BorderSizePixel = 0
+Cth.Position = UDim2.new(0.779709101, 0, 0.889674485, 0)
+Cth.Size = UDim2.new(0.0719999969, 0, 0.18079704, 0)
+Cth.Font = Enum.Font.SourceSans
+Cth.Text = "Ctrl"
+Cth.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cth.TextScaled = true
+Cth.TextSize = 14.000
+Cth.TextWrapped = true
+Cth.MouseButton1Click:Connect(function()
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "Control" ,false ,game)
+	wait()
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "Control" ,false ,game)
+end)
+
+Hidesho.Name = "Hide/sho"
+Hidesho.Parent = drag1
+Hidesho.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Hidesho.BorderSizePixel = 0
+Hidesho.Position = UDim2.new(-0.000920147693, 0, 0.0396149084, 0)
+Hidesho.Size = UDim2.new(0.194787949, 0, 0.880065262, 0)
+Hidesho.Font = Enum.Font.SourceSans
+Hidesho.Text = "Hide Size Changer"
+Hidesho.TextColor3 = Color3.fromRGB(255, 255, 255)
+Hidesho.TextScaled = true
+Hidesho.TextSize = 14.000
+Hidesho.TextWrapped = true
+function Mini3()
+	if Hidesho.Text == "Hide Size Changer" then
+		Hidesho.Text = "Show Size Changer"
+		Setsize.Visible = false
+		Sizechange.Visible = false
+		Sizechange1.Visible = false
+	elseif Hidesho.Text == "Show Size Changer" then
+		Hidesho.Text = "Hide Size Changer"
+		Setsize.Visible = true
+		Sizechange.Visible = true
+		Sizechange1.Visible = true
+	end
+end
+Hidesho.MouseButton1Click:Connect(Mini3)
+
+Sizechange.Name = "Size change"
+Sizechange.Parent = Keyboardgui
+Sizechange.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sizechange.BorderSizePixel = 0
+Sizechange.Position = UDim2.new(0.405312657, 0, 0.0313227922, 0)
+Sizechange.Size = UDim2.new(0.0951553658, 0, 0.166428387, 0)
+Sizechange.Visible = false
+Sizechange.Font = Enum.Font.SourceSans
+Sizechange.Text = "0.9"
+Sizechange.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sizechange.TextScaled = true
+Sizechange.TextSize = 14.000
+Sizechange.TextWrapped = true
+
+Setsize.Name = "Set size"
+Setsize.Parent = Keyboardgui
+Setsize.BackgroundColor3 = Color3.fromRGB(153, 153, 153)
+Setsize.BorderSizePixel = 0
+Setsize.Position = UDim2.new(0.404596657, 0, 0.198646173, 0)
+Setsize.Size = UDim2.new(0.190497547, 0, 0.0989103392, 0)
+Setsize.Visible = false
+Setsize.Font = Enum.Font.SourceSans
+Setsize.Text = "Set Size"
+Setsize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Setsize.TextScaled = true
+Setsize.TextSize = 14.000
+Setsize.TextWrapped = true
+Setsize.MouseButton1Click:Connect(function()
+	drag1.Size = UDim2.new(Sizechange.Text, 0, Sizechange1.Text, 0)
+end)
+
+Sizechange1.Name = "Size change1"
+Sizechange1.Parent = Keyboardgui
+Sizechange1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Sizechange1.BorderSizePixel = 0
+Sizechange1.Position = UDim2.new(0.499938846, 0, 0.0313227922, 0)
+Sizechange1.Size = UDim2.new(0.0951553658, 0, 0.166428387, 0)
+Sizechange1.Font = Enum.Font.SourceSans
+Sizechange1.Text = "0.094"
+Sizechange1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sizechange1.TextScaled = true
+Sizechange1.TextSize = 14.000
+Sizechange1.TextWrapped = true
+Sizechange1.Visible = false

